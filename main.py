@@ -27,6 +27,13 @@ def higher_lower():
   person_b = set_person()
 
   while not end_game:
+    person_a = person_b
+    person_b = set_person()
+
+    #Checks to see that there a two different persons being compared
+    if person_b == person_a:
+      person_b = set_person()
+    
     followers_a = person_a['follower_count']
     followers_b = person_b['follower_count']
 
@@ -41,8 +48,6 @@ def higher_lower():
 
     if choice == answer:
       score += 1
-      person_a = person_b
-      person_b = set_person()
       clear()
       print(logo)
       print(f"You're right! Current score: {score}.")
