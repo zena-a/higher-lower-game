@@ -12,7 +12,7 @@ def set_person():
 
 #Compares two persons to find out who has the most followers
 def compare(person1, person2):
-  """Returns the Instagram user with the most followers"""
+  """Takes the user's follower count and returns the choice (A or B) that represents the user with the most followers"""
   if person1 > person2:
     return "A"
   else:
